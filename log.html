@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>centreeinstein.by</title>
+    <link rel="stylesheet" href= "main.css"
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="service-item">
+                <h1><a href="index.html">Home</a></h1> 
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index1.html">Handout 1</a></li>
+                        <li><a href="index2.html">Handout 2</a></li>
+                        <li><a href="index3.html">Handout 3</a></li>
+                        <li><a href="index4.html">Handout 4</a></li>
+                        <li><a href="index5.html">Handout 5</a></li>
+                        <li><a href="index6.html">Handout 6</a></li>
+                        <li><a href="count.html"><button type="button"class="button">Count</button></a></li>
+                        <li><a href="JefRaskin.html"><button type="button"class="button">Time</button></a></li>
+                        <li><a href="registration.html"><button type="button"class="button">Registration</button></a></li>
+                        <li><a href="log.html"><button type="button"class="button">Log</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="page">
+        <div class="wrap">
+            <h1 class="title-main">Log In </h1>
+              <form id="login-form" onsubmit="return validateForm()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <input type="submit" value="Login">
+              </form>
+              
+              <script>
+                function validateForm() {
+                  var username = document.getElementById("username").value;
+                  var password = document.getElementById("password").value;
+                  
+                  // Здесь вы можете добавить свою логику для проверки учетных данных
+                  // Например, отправить запрос на сервер для аутентификации
+                  
+                  if (username.trim() === "" || password.trim() === "") {
+                    alert("Please enter both username and password.");
+                    return false;
+                  }
+                  
+                  // Если все проверки пройдены успешно, можно продолжить с отправкой формы
+                  return true;
+                }
+              </script>
+        </div>
+    </div>
+</body>
+</html>

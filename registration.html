@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>centreeinstein.by</title>
+    <link rel="stylesheet" href= "main.css"
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="service-item">
+                <h1><a href="index.html">Home</a></h1> 
+                <nav>
+                    <ul class="nav">
+                        <li><a href="index1.html">Handout 1</a></li>
+                        <li><a href="index2.html">Handout 2</a></li>
+                        <li><a href="index3.html">Handout 3</a></li>
+                        <li><a href="index4.html">Handout 4</a></li>
+                        <li><a href="index5.html">Handout 5</a></li>
+                        <li><a href="index6.html">Handout 6</a></li>
+                        <li><a href="count.html"><button type="button"class="button">Count</button></a></li>
+                        <li><a href="JefRaskin.html"><button type="button"class="button">Time</button></a></li>
+                        <li><a href="registration.html"><button type="button"class="button">Registration</button></a></li>
+                        <li><a href="log.html"><button type="button"class="button">Log</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="page">
+        <div class="wrap">
+            <h1 class="title-main">Registration Form</h1>
+                <form id="registration-form" onsubmit="return validateForm()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                
+                <input type="submit" value="Register">
+              </form>
+              
+              <script>
+                function validateForm() {
+                  var username = document.getElementById("username").value;
+                  var email = document.getElementById("email").value;
+                  var password = document.getElementById("password").value;
+                  
+                  if (username.trim() === "") {
+                    alert("Please enter a username.");
+                    return false;
+                  }
+                  
+                  if (!isValidEmail(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                  }
+                  
+                  if (password.length < 8) {
+                    alert("Password must be at least 8 characters long.");
+                    return false;
+                  }
+                  return true;
+                }
+                
+                function isValidEmail(email) {
+                  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  return emailRegex.test(email);
+                }
+              </script>
+        </div>
+    </div>
+</body>
+</html>
